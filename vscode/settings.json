@@ -1,0 +1,52 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "'Ubuntu Mono', monospace",
+  "git.confirmSync": false,
+  "files.associations": {
+    "Dockerfile*": "dockerfile"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "prettier.printWidth": 200,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.detectIndentation": false,
+  "git.alwaysSignOff": true,
+  "typescript.tsserver.log": "verbose",
+  "yaml.format.enable": true,
+  "yaml.validate": false,
+  "yaml.customTags": [
+    "!vault",
+    "!And",
+    "!If",
+    "!Not",
+    "!Equals",
+    "!Or",
+    "!FindInMap",
+    "!Base64",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!Select",
+    "!Split",
+    "!Join sequence"
+  ],
+  "window.zoomLevel": 0,
+  "workbench.iconTheme": "material-icon-theme",
+  "yaml.format.printWidth": 200,
+  "python.formatting.autopep8Args": [
+    "--indent-size=2",
+    "--max-line-length=100"
+  ],
+  "editor.minimap.enabled": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "aws.samcli.location": "/home/tom/.asdf/shims/sam",
+  "aws.profile": "default",
+  "[javascript]": {},
+  "diffEditor.ignoreTrimWhitespace": false,
+  "codemetrics.basics.DecorationModeEnabled": false
+}

@@ -45,7 +45,7 @@ sudo apt install -y \
   automake autoconf libreadline-dev \
   libncurses-dev libssl-dev libyaml-dev \
   libxslt-dev libffi-dev libtool unixodbc-dev \
-  unzip curl
+  unzip curl zlib1g-dev
 
 # asdf nodejs plugin
 # https://github.com/asdf-vm/asdf-nodejs
@@ -74,7 +74,7 @@ wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
 sudo tar -xzf postman.tar.gz -C /opt
 rm postman.tar.gz
 sudo ln -s /opt/Postman/Postman /usr/bin/postman
-cp ./postman.desktop ~/.local/share/applications/
+cp ./postman/postman.desktop ~/.local/share/applications/
 
 # slack
 wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.1.2-amd64.deb
@@ -117,7 +117,7 @@ Spotify
 # https://www.spotify.com/us/download/linux/
 
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 
 sudo apt update
 sudo apt install -y spotify-client
@@ -127,8 +127,10 @@ sudo apt install -y spotify-client
 ```sh
 cd dotfiles
 
-ln -s `pwd`/.gitconfig ~/.gitconfig
-ls -s `pwd`/.bashrc ~/.bashrc
-ls -s `pwd`/vscode/keybindings.json "~/.config/Code - Insiders/User/keybindings.json"
-ls -s `pwd`/vscode/settings.json "~/.config/Code - Insiders/User/settings.json"
+ln -sf `pwd`/.gitconfig ~/.gitconfig
+ln -sf `pwd`/.bashrc ~/.bashrc
+
+mkdir -p "~/.config/Code - Insiders/User/"
+ln -s `pwd`/vscode/keybindings.json "~/.config/Code - Insiders/User/keybindings.json"
+ln -s `pwd`/vscode/settings.json "~/.config/Code - Insiders/User/settings.json"
 ```

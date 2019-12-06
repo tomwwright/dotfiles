@@ -1,4 +1,5 @@
 # dotfiles
+
 My Ubuntu environment dotfiles and config
 
 # Configure OS
@@ -15,7 +16,7 @@ sudo apt install -y \
   gpg \
   gnupg-agent \
   software-properties-common
-  
+
 # utilities
 sudo apt install -y \
   keychain \
@@ -86,6 +87,7 @@ sudo apt install -y vlc
 ```
 
 Visual Studio Code
+
 ```sh
 # visual studio code
 # https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/
@@ -113,15 +115,17 @@ code-insiders --install-extension vscoss.vscode-ansible
 ```
 
 Spotify
+
 ```sh
 # https://www.spotify.com/us/download/linux/
 
-curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
 sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 
 sudo apt update
 sudo apt install -y spotify-client
 ```
+
 ## Install Configuration
 
 ```sh

@@ -8,7 +8,7 @@ My Ubuntu environment dotfiles and config
 sudo apt update
 
 # basic system deps
-sudo apt install \
+sudo apt install -y \
   apt-transport-https \
   ca-certificates \
   curl \
@@ -17,7 +17,7 @@ sudo apt install \
   software-properties-common
   
 # utilities
-sudo apt install \
+sudo apt install -y \
   keychain \
   git
 
@@ -25,7 +25,7 @@ sudo apt install \
 # https://docs.docker.com/install/linux/docker-ce/ubuntu/
 # https://stackoverflow.com/questions/45023363/what-is-docker-io-in-relation-to-docker-ce-and-docker-ee/57678382#57678382
 sudo apt-get remove docker docker-engine docker.io containerd runc
-sudo apt install docker.io
+sudo apt install -y docker.io
 
 sudo systemctl start docker
 sudo systemctl enable docker
@@ -41,7 +41,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 # https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.5
 exec bash
-sudo apt install \
+sudo apt install -y \
   automake autoconf libreadline-dev \
   libncurses-dev libssl-dev libyaml-dev \
   libxslt-dev libffi-dev libtool unixodbc-dev \
@@ -63,11 +63,11 @@ asdf install python 2.7.17
 asdf global python 3.7.5 2.7.17
 
 # aws cli and sam cli
-sudo apt install awscli
+sudo apt install -y awscli
 pip install --user aws-sam-cli
 
 # chromium
-sudo apt install chromium-browser
+sudo apt install -y chromium-browser
 
 # postman
 wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
@@ -78,11 +78,11 @@ cp ./postman.desktop ~/.local/share/applications/
 
 # slack
 wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.1.2-amd64.deb
-sudo apt install ./slack-desktop-*.deb
+sudo apt install -y ./slack-desktop-*.deb
 rm slack-desktop-*.deb
 
 # vlc
-sudo apt install vlc
+sudo apt install -y vlc
 ```
 
 Visual Studio Code
@@ -93,7 +93,7 @@ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 
 sudo apt update
-sudo apt install code-insiders
+sudo apt install -y code-insiders
 
 # extensions
 code-insiders --install-extension amazonwebservices.aws-toolkit-vscode
@@ -120,7 +120,7 @@ curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt update
-sudo apt install spotify-client
+sudo apt install -y spotify-client
 ```
 ## Install Configuration
 

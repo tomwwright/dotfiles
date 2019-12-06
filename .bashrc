@@ -136,8 +136,8 @@ export PATH="~/.config/yarn/global/node_modules/.bin:$PATH"
 # aliases
 alias hgrep='history | grep '
 
-# add key for github to keychain 
-keychain ~/.ssh/github.pem
+# add personal ssh key to keychain 
+keychain ~/.ssh/tom.pem
 . ~/.keychain/`uname -n`-sh
 
 # asdf

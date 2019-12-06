@@ -130,7 +130,7 @@ cd dotfiles
 ln -sf `pwd`/.gitconfig ~/.gitconfig
 ln -sf `pwd`/.bashrc ~/.bashrc
 
-mkdir -p "~/.config/Code - Insiders/User/"
-ln -s `pwd`/vscode/keybindings.json "~/.config/Code - Insiders/User/keybindings.json"
-ln -s `pwd`/vscode/settings.json "~/.config/Code - Insiders/User/settings.json"
+mkdir -p ~/.config/Code\ -\ Insiders/User/
+ln -s `pwd`/vscode/keybindings.json ~/.config/Code\ -\ Insiders/User/keybindings.json
+ln -s `pwd`/vscode/settings.json ~/.config/Code\ -\ Insiders/User/settings.json
 ```

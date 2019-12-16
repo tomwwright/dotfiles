@@ -2,11 +2,38 @@
 
 My Ubuntu environment dotfiles and config
 
-# Configure OS
+## Configuration
+
+Configure Chromium, 1Password, download SSH key
 
 ```sh
 
 sudo apt update
+
+# chromium
+sudo apt install -y \
+  chromium-browser \
+  git \
+  keychain
+
+# configure 1Password X extension and download tom.pem (and .pub) key
+keychain ~/.ssh/tom.pem
+
+# clone this repo
+mkdir ~/Projects
+cd ~/Projects
+git clone git@github.com:tomwwright/dotfiles.git
+
+# install dotfiles config
+cd dotfiles
+ln -sf `pwd`/.gitconfig ~/.gitconfig
+ln -sf `pwd`/.bashrc ~/.bashrc
+mkdir -p ~/.config/Code\ -\ Insiders/User/
+ln -s `pwd`/vscode/keybindings.json ~/.config/Code\ -\ Insiders/User/keybindings.json
+ln -s `pwd`/vscode/settings.json ~/.config/Code\ -\ Insiders/User/settings.json
+```
+
+```sh
 
 # basic system deps
 sudo apt install -y \
@@ -17,10 +44,29 @@ sudo apt install -y \
   gnupg-agent \
   software-properties-common
 
-# utilities
-sudo apt install -y \
-  keychain \
-  git
+# visual studio code
+# https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+
+sudo apt update
+sudo apt install -y code-insiders
+
+# extensions
+code-insiders --install-extension amazonwebservices.aws-toolkit-vscode
+code-insiders --install-extension eamodio.gitlens
+code-insiders --install-extension esbenp.prettier-vscode
+code-insiders --install-extension kisstkondoros.vscode-codemetrics
+code-insiders --install-extension mauve.terraform
+code-insiders --install-extension mikestead.dotenv
+code-insiders --install-extension ms-azuretools.vscode-docker
+code-insiders --install-extension ms-python.python
+code-insiders --install-extension PKief.material-icon-theme
+code-insiders --install-extension redhat.vscode-yaml
+code-insiders --install-extension ritwickdey.LiveServer
+code-insiders --install-extension samuelcolvin.jinjahtml
+code-insiders --install-extension SirTobi.pegjs-language
+code-insiders --install-extension vscoss.vscode-ansible
 
 # docker
 # https://docs.docker.com/install/linux/docker-ce/ubuntu/
@@ -67,8 +113,6 @@ asdf global python 3.7.5 2.7.17
 sudo apt install -y awscli
 pip install --user aws-sam-cli
 
-# chromium
-sudo apt install -y chromium-browser
 
 # postman
 wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
@@ -84,39 +128,8 @@ rm slack-desktop-*.deb
 
 # vlc
 sudo apt install -y vlc
-```
 
-Visual Studio Code
-
-```sh
-# visual studio code
-# https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-18-04/
-wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-
-sudo apt update
-sudo apt install -y code-insiders
-
-# extensions
-code-insiders --install-extension amazonwebservices.aws-toolkit-vscode
-code-insiders --install-extension eamodio.gitlens
-code-insiders --install-extension esbenp.prettier-vscode
-code-insiders --install-extension kisstkondoros.vscode-codemetrics
-code-insiders --install-extension mauve.terraform
-code-insiders --install-extension mikestead.dotenv
-code-insiders --install-extension ms-azuretools.vscode-docker
-code-insiders --install-extension ms-python.python
-code-insiders --install-extension PKief.material-icon-theme
-code-insiders --install-extension redhat.vscode-yaml
-code-insiders --install-extension ritwickdey.LiveServer
-code-insiders --install-extension samuelcolvin.jinjahtml
-code-insiders --install-extension SirTobi.pegjs-language
-code-insiders --install-extension vscoss.vscode-ansible
-```
-
-Spotify
-
-```sh
+# spotify
 # https://www.spotify.com/us/download/linux/
 
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add -
@@ -124,17 +137,4 @@ sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 
 sudo apt update
 sudo apt install -y spotify-client
-```
-
-## Install Configuration
-
-```sh
-cd dotfiles
-
-ln -sf `pwd`/.gitconfig ~/.gitconfig
-ln -sf `pwd`/.bashrc ~/.bashrc
-
-mkdir -p ~/.config/Code\ -\ Insiders/User/
-ln -s `pwd`/vscode/keybindings.json ~/.config/Code\ -\ Insiders/User/keybindings.json
-ln -s `pwd`/vscode/settings.json ~/.config/Code\ -\ Insiders/User/settings.json
 ```

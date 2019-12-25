@@ -20,7 +20,8 @@ sudo apt install -y \
 # utilities
 sudo apt install -y \
   keychain \
-  git
+  git \
+  jq
 
 # docker
 # https://docs.docker.com/install/linux/docker-ce/ubuntu/

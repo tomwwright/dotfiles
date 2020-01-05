@@ -14,7 +14,8 @@ sudo apt update
 sudo apt install -y \
   chromium-browser \
   git \
-  keychain
+  keychain \
+  jq
 
 # configure 1Password X extension and download tom.pem (and .pub) key
 keychain ~/.ssh/tom.pem

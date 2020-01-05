@@ -10,7 +10,6 @@
   "prettier.printWidth": 200,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "editor.detectIndentation": false,
-  "git.alwaysSignOff": true,
   "typescript.tsserver.log": "verbose",
   "yaml.format.enable": true,
   "yaml.validate": false,

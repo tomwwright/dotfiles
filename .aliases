@@ -1,0 +1,5 @@
+# alias definitions to be included in .*rc files
+
+alias code='code-insiders'
+
+alias hgrep='history | grep'

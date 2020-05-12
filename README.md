@@ -68,6 +68,7 @@ code-insiders --install-extension ritwickdey.LiveServer
 code-insiders --install-extension samuelcolvin.jinjahtml
 code-insiders --install-extension SirTobi.pegjs-language
 code-insiders --install-extension vscoss.vscode-ansible
+code-insiders --install-extension hediet.vscode-drawio
 
 # docker
 # https://docs.docker.com/install/linux/docker-ce/ubuntu/
@@ -102,6 +103,10 @@ bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
 
 asdf install nodejs 12.13.1
 asdf global nodejs 12.13.1
+
+# packages to support Python modules
+sudo apt install -y \
+  libbz2-dev libsqlite3-dev
 
 # asdf python plugin
 # https://github.com/danhper/asdf-python
@@ -138,4 +143,9 @@ sudo add-apt-repository "deb http://repository.spotify.com stable non-free"
 
 sudo apt update
 sudo apt install -y spotify-client
+
+# draw.io
+wget https://github.com/jgraph/drawio-desktop/releases/download/v12.9.3/draw.io-amd64-12.9.3.deb
+sudo apt install ./draw.io-amd64-12.9.3.deb
+rm draw.io-*.deb
 ```

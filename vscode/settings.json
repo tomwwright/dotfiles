@@ -30,22 +30,33 @@
     "!ImportValue",
     "!Select",
     "!Split",
-    "!Join sequence"
+    "!Join sequence",
+    "!And sequence",
+    "!If sequence",
+    "!Not sequence",
+    "!Equals sequence",
+    "!Or sequence",
+    "!FindInMap sequence",
+    "!Join",
+    "!Sub sequence",
+    "!ImportValue sequence",
+    "!Select sequence",
+    "!Split sequence"
   ],
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "workbench.iconTheme": "material-icon-theme",
   "yaml.format.printWidth": 200,
   "python.formatting.autopep8Args": [
     "--indent-size=2",
-    "--max-line-length=100"
+    "--max-line-length=160"
   ],
   "editor.minimap.enabled": false,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "aws.samcli.location": "/home/tom/.asdf/shims/sam",
-  "aws.profile": "default",
   "[javascript]": {},
   "diffEditor.ignoreTrimWhitespace": false,
-  "codemetrics.basics.DecorationModeEnabled": false
+  "codemetrics.basics.DecorationModeEnabled": false,
+  "aws.samcli.location": "/home/tom/.asdf/shims/sam",
+  "aws.profile": "profile:versentwhodis"
 }

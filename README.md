@@ -148,4 +148,7 @@ sudo apt install -y spotify-client
 wget https://github.com/jgraph/drawio-desktop/releases/download/v12.9.3/draw.io-amd64-12.9.3.deb
 sudo apt install ./draw.io-amd64-12.9.3.deb
 rm draw.io-*.deb
+
+# https://gnomepomodoro.org/
+sudo apt install gnome-shell-pomodoro
 ```

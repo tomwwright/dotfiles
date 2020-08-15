@@ -71,8 +71,9 @@ ${color3}Uptime${color}  ${alignr} ${uptime}
 ${font UbuntuMono:Bold:size=12}${color2}C P U ${hr 2}${color}${font}
 ${font UbuntuMono:size=10}${color2}${alignr} ${execi 6000 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq}${font}
 
-${color3}Clock ${color}    ${freq_g} GHz ${goto 160} ${color3} Temp ${color}    ${acpitemp}°C ${alignr} ${color3} Usage ${color} ${cpu} %
-${color3}Processes ${color}     ${processes} ${goto 160} ${color3} Threads ${color} ${threads}
+${color3}Clock ${color}  ${freq_g} GHz     ${goto 150} ${color3}Processes ${color} ${processes} ${alignr} ${color3}Load 1 ${color}  ${loadavg 1}
+${color3}Usage ${color}       ${cpu} % ${goto 150} ${color3}Threads ${color}  ${threads}  ${alignr} ${color3}Load 5 ${color}  ${loadavg 2}
+${color3}Temp ${color}       ${acpitemp}°C   ${alignr} ${color3}Load 15 ${color} ${loadavg 3}
 
 ${color3}1${color} ${voffset 2}${cpubar cpu1 8, 65}${voffset -2}   ${color3}2${color} ${voffset 2}${cpubar cpu2 8, 65}${voffset -2}   ${color3}3${color} ${voffset 2}${cpubar cpu3 8, 65}${voffset -2}   ${color3}4${color} ${voffset 2}${cpubar cpu4 8, 65}${voffset -2}
 ${color3}5${color} ${voffset 2}${cpubar cpu5 8, 65}${voffset -2}   ${color3}6${color} ${voffset 2}${cpubar cpu6 8, 65}${voffset -2}   ${color3}7${color} ${voffset 2}${cpubar cpu7 8, 65}${voffset -2}   ${color3}8${color} ${voffset 2}${cpubar cpu8 8, 65}${voffset -2}

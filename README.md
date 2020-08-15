@@ -151,4 +151,9 @@ rm draw.io-*.deb
 
 # https://gnomepomodoro.org/
 sudo apt install gnome-shell-pomodoro
+
+# conky
+sudo apt install conky
+ln -s `pwd`/conky/.conkyrc ~/.conkyrc
+ln -s `pwd`/conky/conky.desktop ~/.config/autostart/conky.desktop
 ```

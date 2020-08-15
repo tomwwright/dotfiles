@@ -119,6 +119,10 @@ asdf global python 3.7.5 2.7.17
 sudo apt install -y awscli
 pip install --user aws-sam-cli
 
+# sesion manager plugin for aws cli
+curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+sudo dpkg -i session-manager-plugin.deb
+
 
 # postman
 wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz

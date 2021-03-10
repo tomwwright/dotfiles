@@ -14,42 +14,39 @@
   "yaml.format.enable": true,
   "yaml.validate": false,
   "yaml.customTags": [
-    "!vault",
+    "!sha scalar",
     "!And",
+    "!And sequence",
     "!If",
+    "!If sequence",
     "!Not",
+    "!Not sequence",
     "!Equals",
+    "!Equals sequence",
     "!Or",
+    "!Or sequence",
     "!FindInMap",
+    "!FindInMap sequence",
     "!Base64",
+    "!Join",
+    "!Join sequence",
     "!Cidr",
     "!Ref",
     "!Sub",
+    "!Sub sequence",
     "!GetAtt",
     "!GetAZs",
     "!ImportValue",
-    "!Select",
-    "!Split",
-    "!Join sequence",
-    "!And sequence",
-    "!If sequence",
-    "!Not sequence",
-    "!Equals sequence",
-    "!Or sequence",
-    "!FindInMap sequence",
-    "!Join",
-    "!Sub sequence",
     "!ImportValue sequence",
+    "!Select",
     "!Select sequence",
+    "!Split",
     "!Split sequence"
   ],
   "window.zoomLevel": 1,
   "workbench.iconTheme": "material-icon-theme",
   "yaml.format.printWidth": 200,
-  "python.formatting.autopep8Args": [
-    "--indent-size=2",
-    "--max-line-length=160"
-  ],
+  "python.formatting.autopep8Args": ["--indent-size=2", "--max-line-length=160"],
   "editor.minimap.enabled": false,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -58,5 +55,20 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "codemetrics.basics.DecorationModeEnabled": false,
   "aws.samcli.location": "/home/tom/.asdf/shims/sam",
-  "aws.profile": "profile:versentwhodis"
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7dW1sO2VyO2JwbW47Zmxvd2NoYXJ0O2Jhc2ljO2Fycm93czJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjowLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "markdown.extension.toc.levels": "1..3",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter-notebook",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "python.languageServer": "Pylance"
 }

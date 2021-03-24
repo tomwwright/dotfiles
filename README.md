@@ -161,3 +161,46 @@ sudo apt install conky
 ln -s `pwd`/conky/.conkyrc ~/.conkyrc
 ln -s `pwd`/conky/conky.desktop ~/.config/autostart/conky.desktop
 ```
+
+## Mac OS
+
+Download `tom.pem` SSH key from 1Password
+
+```sh
+# configure SSH key
+mkdir ~/.ssh
+cp ~/Downloads/tom.pem ~/.ssh 
+chmod 0400 ~/.ssh/tom.pem
+ssh-add -K ~/.ssh/tom.pem
+
+# clone this repo
+mkdir ~/Projects
+cd ~/Projects
+git clone git@github.com:tomwwright/dotfiles.git
+```
+
+## Oh my Zsh
+
+```sh
+# install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# install Oh My ZSH plugins
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+# install Starship prompt https://github.com/starship/starship
+curl -fsSL https://starship.rs/install.sh | bash
+```
+
+## Homebrew
+
+```sh
+# install Homebrew https://brew.sh/
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# install global Brewfile
+ln -sf `pwd`/Brewfile ~/.Brewfile
+brew bundle --global
+```
+

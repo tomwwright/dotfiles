@@ -1,46 +1,60 @@
 {
-  "[javascript]": {},
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": false,
+    "gitlens.codeLens.symbolScopes": [
+      "!Module"
+    ]
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "aws.samcli.location": "/home/tom/.asdf/shims/sam",
-  "codemetrics.basics.DecorationModeEnabled": false,
   "diffEditor.ignoreTrimWhitespace": false,
+  "editor.codeActionsOnSave": {},
   "editor.detectIndentation": false,
-  "editor.fontFamily": "'Ubuntu Mono', monospace",
   "editor.formatOnSave": true,
-  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
   "editor.tabSize": 2,
   "files.associations": {
     "Dockerfile*": "dockerfile"
   },
   "git.confirmSync": false,
-  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7dW1sO2VyO2JwbW47Zmxvd2NoYXJ0O2Jhc2ljO2Fycm93czJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjowLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0=",
+  "git.path": "/usr/local/bin/git",
+  "git.suggestSmartCommit": false,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "githubPullRequests.pullBranch": "never",
+  "go.alternateTools": {
+    "go": "/Users/tomwright/.asdf/shims/go"
+  },
   "javascript.updateImportsOnFileMove.enabled": "never",
-  "liveServer.settings.donotShowInfoMsg": true,
-  "markdown.extension.toc.levels": "1..3",
-  "prettier.printWidth": 200,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
   "python.formatting.autopep8Args": [
     "--indent-size=2",
     "--max-line-length=160"
   ],
   "python.languageServer": "Pylance",
-  "typescript.tsserver.log": "verbose",
-  "typescript.updateImportsOnFileMove.enabled": "always",
   "window.zoomLevel": 1,
-  "workbench.editorAssociations": [
-    {
-      "filenamePattern": "*.ipynb",
-      "viewType": "jupyter-notebook"
-    }
-  ],
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
   "yaml.customTags": [
     "!sha scalar",
     "!And",
@@ -70,8 +84,5 @@
     "!Select sequence",
     "!Split",
     "!Split sequence"
-  ],
-  "yaml.format.enable": true,
-  "yaml.format.printWidth": 200,
-  "yaml.validate": false
+  ]
 }

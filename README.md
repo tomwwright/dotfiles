@@ -177,6 +177,16 @@ ssh-add -K ~/.ssh/tom.pem
 mkdir ~/Projects
 cd ~/Projects
 git clone git@github.com:tomwwright/dotfiles.git
+
+# install Homebrew https://brew.sh/
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# install global Brewfile
+ln -sf `pwd`/Brewfile ~/.Brewfile
+brew bundle --global
+
+# install vscode settings
+ln -sf `pwd`/vscode/settings.json ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
 ```
 
 ## Oh my Zsh
@@ -191,16 +201,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 
 # install Starship prompt https://github.com/starship/starship
 curl -fsSL https://starship.rs/install.sh | bash
-```
-
-## Homebrew
-
-```sh
-# install Homebrew https://brew.sh/
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# install global Brewfile
-ln -sf `pwd`/Brewfile ~/.Brewfile
-brew bundle --global
 ```
 

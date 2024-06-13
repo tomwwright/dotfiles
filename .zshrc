@@ -127,3 +127,11 @@ fi
 
 # Enable Starship theme
 eval "$(starship init zsh)"
+
+# pnpm
+export PNPM_HOME="/Users/tom.wright/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

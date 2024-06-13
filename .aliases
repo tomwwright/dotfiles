@@ -3,5 +3,3 @@
 alias code='code-insiders'
 
 alias hgrep='history | grep'
-
-alias docker='podman'
